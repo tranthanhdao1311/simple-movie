@@ -1,0 +1,15 @@
+.box-btn-load {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-loadmore {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--color-primary);
+  font-weight: bold;
+  margin-top: 20px;
+}

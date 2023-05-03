@@ -1,0 +1,28 @@
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.movie-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
+  .movie-item {
+    margin: 20px;
+  }
+}
+.paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  list-style: none;
+  gap: 15px;
+}
+
+.selected a {
+  color: var(--color-primary);
+}

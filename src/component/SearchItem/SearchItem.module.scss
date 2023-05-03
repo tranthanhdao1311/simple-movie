@@ -1,0 +1,16 @@
+.wrapper {
+  background-color: white;
+}
+.info-movie {
+  padding: 10px 10px;
+  border-bottom: 1px solid #ccc;
+  transition: 0.1s linear;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #ccc;
+  }
+}
+.search-item {
+  color: black;
+}

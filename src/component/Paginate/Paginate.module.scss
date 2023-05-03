@@ -1,0 +1,14 @@
+.paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  list-style: none;
+  gap: 15px;
+}
+
+.selected a {
+  color: var(--color-primary);
+}
