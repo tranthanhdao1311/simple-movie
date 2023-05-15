@@ -11,7 +11,7 @@ const Home = ({ children }) => {
     <>
       <div className={cx("container")}>
         {children}
-        <div>
+        <div className={cx("now-playing")}>
           <h1 className={cx("title")}>Now Playing</h1>
           <MovieList></MovieList>
         </div>

@@ -12,6 +12,14 @@ const cx = classNames.bind(styles);
 const MovieList = ({ type = "now_playing" }) => {
   const [movies, setMovies] = useState([]);
   const { data, error } = useSWR(TMDBApi.getMovie(type), fetcher);
+  const [widthWindow, setWidthWindow] = useState();
+
+  function handleResize() {
+    const width = window.innerWidth;
+    setWidthWindow(width);
+  }
+
+  window.addEventListener("resize", handleResize);
 
   const isLoading = !data && !error;
 
@@ -46,10 +54,17 @@ const MovieList = ({ type = "now_playing" }) => {
         </>
       )}
       {!isLoading && (
-        <Swiper grabCursor={"true"} spaceBetween={40} slidesPerView={5}>
+        <Swiper
+          grabCursor={"true"}
+          spaceBetween={40}
+          slidesPerView={widthWindow ? (widthWindow > 769 ? 5 : 2) : 5}
+        >
           {movies.length > 0 &&
             movies.map((item) => (
-              <SwiperSlide style={{ width: "240px" }} key={item.id}>
+              <SwiperSlide
+                style={{ width: "240px", marginRight: "10px !important" }}
+                key={item.id}
+              >
                 <MovieCard data={item}></MovieCard>
               </SwiperSlide>
             ))}
