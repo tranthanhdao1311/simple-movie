@@ -47,7 +47,7 @@ const Banner = () => {
       )}
       {!isLoading && (
         <Swiper
-          autoplay={{ delay: 4000 }}
+          // autoplay={{ delay: 4000 }}
           grabCursor={"true"}
           slidesPerView={"auto"}
         >
