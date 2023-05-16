@@ -54,10 +54,10 @@ const MovieDetailsPage = () => {
         <div className={cx("description")}>{data.overview}</div>
         <MovieMeta type="credits"></MovieMeta>
         <MovieMeta type="videos"></MovieMeta>
-        {/* <MovieMeta type="similar"></MovieMeta> */}
+        <MovieMeta type="similar"></MovieMeta>
         {/* <MovieCredits></MovieCredits>
-        <MovieVideos></MovieVideos>
-        <SimilarMovies></SimilarMovies> */}
+        <MovieVideos></MovieVideos> */}
+        {/* <SimilarMovies></SimilarMovies> */}
       </div>
       <ScrollToTop></ScrollToTop>
     </>
@@ -124,7 +124,10 @@ function MovieMeta({ type }) {
           {results.length > 0 &&
             results.map((item) => (
               <SwiperSlide style={{ width: "240px" }} key={item.id}>
-                <MovieCard data={item}></MovieCard>
+                <MovieCard
+                  className={cx("custom-card")}
+                  data={item}
+                ></MovieCard>
               </SwiperSlide>
             ))}
         </Swiper>
@@ -209,7 +212,7 @@ function SimilarMovies() {
     <div className={cx("movie-list")}>
       <h1 className={cx("title-similar")}>Similar Movies</h1>
 
-      <Swiper grabCursor={"true"} spaceBetween={40} slidesPerView={5}>
+      <Swiper grabCursor={"true"} spaceBetween={40} slidesPerView={"auto"}>
         {results.length > 0 &&
           results.map((item) => (
             <SwiperSlide style={{ width: "240px" }} key={item.id}>
