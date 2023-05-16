@@ -34,7 +34,7 @@ const MovieList = ({ type = "now_playing" }) => {
     <div className={cx("movie-list")}>
       {isLoading && (
         <>
-          <Swiper grabCursor={"true"} spaceBetween={40} slidesPerView={5}>
+          <Swiper grabCursor={"true"} spaceBetween={40} slidesPerView={"auto"}>
             <SwiperSlide style={{ width: "240px" }}>
               <MovieCardSkeleton></MovieCardSkeleton>
             </SwiperSlide>
@@ -63,7 +63,10 @@ const MovieList = ({ type = "now_playing" }) => {
           {movies.length > 0 &&
             movies.map((item) => (
               <SwiperSlide style={{ width: "240px" }} key={item.id}>
-                <MovieCard data={item}></MovieCard>
+                <MovieCard
+                  className={cx("custom-movie-card")}
+                  data={item}
+                ></MovieCard>
               </SwiperSlide>
             ))}
         </Swiper>

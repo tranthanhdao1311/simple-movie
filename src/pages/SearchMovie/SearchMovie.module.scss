@@ -1,5 +1,5 @@
 .wrapper {
-  width: 1300px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -26,4 +26,33 @@
   color: white;
   font-size: 20px;
   margin: 0 5px 10px 5px;
+}
+
+.custom-card {
+}
+
+.item-card {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+@media (max-width: 1140px) {
+  .item-card {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1023px) {
+  .item-card {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 769px) {
+  .item-card {
+    grid-template-columns: auto auto;
+  }
+
+  .title-search {
+    margin: 20px 10px;
+  }
 }

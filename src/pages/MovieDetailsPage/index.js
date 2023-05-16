@@ -54,7 +54,7 @@ const MovieDetailsPage = () => {
         <div className={cx("description")}>{data.overview}</div>
         <MovieMeta type="credits"></MovieMeta>
         <MovieMeta type="videos"></MovieMeta>
-        <MovieMeta type="similar"></MovieMeta>
+        {/* <MovieMeta type="similar"></MovieMeta> */}
         {/* <MovieCredits></MovieCredits>
         <MovieVideos></MovieVideos>
         <SimilarMovies></SimilarMovies> */}

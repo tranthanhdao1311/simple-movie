@@ -1,5 +1,5 @@
 .container {
-  width: 1300px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -25,4 +25,22 @@
 
 .selected a {
   color: var(--color-primary);
+}
+
+@media (max-width: 1140px) {
+  .movie-list {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1023px) {
+  .movie-list {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 769px) {
+  .movie-list {
+    grid-template-columns: auto auto;
+  }
 }

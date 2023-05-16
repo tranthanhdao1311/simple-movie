@@ -127,3 +127,14 @@
   width: 1250px;
   margin: 0 auto;
 }
+
+@media (max-width: 769px) {
+  .box-cast {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cast-item {
+    margin-bottom: 40px;
+  }
+}

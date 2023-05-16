@@ -12,13 +12,13 @@ import LoadingSkeleton from "component/LoadingSkeleton";
 
 const cx = classNames.bind(styles);
 
-const MovieCard = ({ data }) => {
+const MovieCard = ({ data, className }) => {
   const { backdrop_path, original_title, release_date, vote_average, id } =
     data;
   const navigate = useNavigate();
 
   return (
-    <div className={cx("movie-item")}>
+    <div className={cx("movie-item", className)}>
       <div className={cx("box-img")}>
         <img
           className={cx("img")}

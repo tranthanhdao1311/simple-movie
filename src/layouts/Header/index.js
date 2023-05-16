@@ -15,9 +15,9 @@ const Header = () => {
         <NavLink className={active} to="/movies">
           Movies
         </NavLink>
-        <NavLink className={active} to="/tvseries">
+        {/* <NavLink className={active} to="/tvseries">
           TV Series
-        </NavLink>
+        </NavLink> */}
       </header>
     </Fragment>
   );

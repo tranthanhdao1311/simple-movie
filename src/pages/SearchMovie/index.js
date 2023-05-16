@@ -43,12 +43,17 @@ const SearchMovie = () => {
 
         {loading && <div className={cx("loading")}></div>}
         <p className={cx("title-search")}>Kết quả tìm kiếm với "{key}"</p>
-        {!loading &&
-          moviesSearch.length > 0 &&
-          moviesSearch.map((item) => (
-            <MovieCard key={item.id} data={item}></MovieCard>
-          ))}
-
+        <div className={cx("item-card")}>
+          {!loading &&
+            moviesSearch.length > 0 &&
+            moviesSearch.map((item) => (
+              <MovieCard
+                className={cx("custom-card")}
+                key={item.id}
+                data={item}
+              ></MovieCard>
+            ))}
+        </div>
         {/* <LoadMore onClick={() => setSize(size + 1)}></LoadMore> */}
 
         <Paginate setCurrentPage={setCurrentPage} data={data}></Paginate>
