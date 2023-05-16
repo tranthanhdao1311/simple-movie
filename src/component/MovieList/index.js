@@ -57,14 +57,12 @@ const MovieList = ({ type = "now_playing" }) => {
         <Swiper
           grabCursor={"true"}
           spaceBetween={40}
-          slidesPerView={widthWindow ? (widthWindow > 769 ? 5 : 2) : 5}
+          // slidesPerView={widthWindow ? (widthWindow > 769 ? 5 : 2) : 5}
+          slidesPerView={"auto"}
         >
           {movies.length > 0 &&
             movies.map((item) => (
-              <SwiperSlide
-                style={{ width: "240px", marginRight: "10px !important" }}
-                key={item.id}
-              >
+              <SwiperSlide style={{ width: "240px" }} key={item.id}>
                 <MovieCard data={item}></MovieCard>
               </SwiperSlide>
             ))}
