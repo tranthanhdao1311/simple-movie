@@ -15,11 +15,11 @@ const Home = ({ children }) => {
           <h1 className={cx("title")}>Now Playing</h1>
           <MovieList></MovieList>
         </div>
-        <div>
+        <div className={cx("top-rated")}>
           <h1 className={cx("title")}>Top rated movies</h1>
           <MovieList type={"top_rated"}></MovieList>
         </div>
-        <div>
+        <div className={cx("trending")}>
           <h1 className={cx("title")}>Top trending</h1>
           <MovieList type={"popular"}></MovieList>
         </div>
